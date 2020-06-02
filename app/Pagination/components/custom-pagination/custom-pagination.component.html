@@ -1,0 +1,18 @@
+<div align="right" *ngIf="page" class="card-actions align-items-center justify-content-end">
+  <span class="align-self-center mb-1 mr-2 text-muted">
+    Page {{page.pageable.pageNumber+1}} of {{page.totalPages}}
+  </span>
+  <span class="align-self-center mb-1 mr-2 text-muted">
+    Shows {{page.numberOfElements}} of {{page.totalElements}}
+  </span>
+  <button [routerLink]=""
+    class="btn btn-outline" [disabled]="page.first"
+    (click)="previousPage()">
+    previous
+  </button>
+  <button [routerLink]=""
+    class="btn btn-outline" [disabled]="page.last"
+    (click)="nextPage()">
+    next
+  </button>
+</div>

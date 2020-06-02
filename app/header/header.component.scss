@@ -1,0 +1,17 @@
+.mat-menu-item
+{
+  font-size: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.mat-menu-content:not(:empty) {
+  padding-top: 37px;
+  padding-bottom: 8px;
+  }
+
+  ::ng-deep .mat-menu-content:not(:empty) {
+  padding-top: 80px;
+  padding-bottom: 0px;
+  }

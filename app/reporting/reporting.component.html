@@ -1,0 +1,104 @@
+<h1 style="margin-top: 150px;text-align: center;font-size: 40px;" class="text-uppercase text-black font-weight-bold"><i class="success-color fas fa-chart-line"></i>Reporting</h1>
+<div style="margin-top: 20px; width: 1900px;">
+<section class="mt-lg-2" >
+             <div class="row">
+           <div  class="col-xl-9 col-lg-6">
+             <div  class="card card-stats mb-4 mb-xl-0">
+               <div style="background-color: ghostwhite;" class="card-body">
+             <div  class="row">
+              <div id="cardbody" class="card card-cascade cascading-admin-card">
+                <div  class="admin-up">
+                  <i  class="warning-color far fa-id-card"></i>
+                  <div  class="data">
+                    <p style="font-weight: bold;font-size: 20px;"><strong>{{cleaning_count}}</strong></p>
+                    <p >NOMBRE DES NETTOYAGES</p>
+                  </div>
+                </div>
+                <div  class="card-body">
+                </div>
+              </div>
+              <div id="cardbody" class="card card-cascade cascading-admin-card">
+                <div  class="admin-up">
+                  <i class="success-color far fa-id-card"></i>
+                  <div  class="data">
+                    <p style="font-weight: bold;font-size: 20px;"><strong>{{customers_count}}</strong></p>
+                    <p >LIGNES PARCOURUES</p>
+                  </div>
+                </div>
+                <div  class="card-body">
+                </div>
+              </div>
+              <div id="cardbody" class="card card-cascade cascading-admin-card">
+                <div  class="admin-up">
+                  <i class="danger-color far fa-id-card"></i>
+                  <div  class="data">
+                    <p style="font-weight: bold;font-size: 20px;"><strong>{{err_data_count}}</strong></p>
+                    <p >LIGNES ERRONEES</p>
+                  </div>
+                </div>
+                <div  class="card-body">
+                </div>
+              </div>
+              <div id="cardbody" class="card card-cascade cascading-admin-card">
+                <div  class="admin-up">
+                  <i class="primary-color far fa-id-card"></i>
+                  <div  class="data">
+                    <p style="font-weight: bold;font-size: 20px;"><strong>{{edited_data_count}}</strong></p>
+                    <p >LIGNES CORRIGEES</p>
+                  </div>
+                </div>
+                <div  class="card-body">
+                </div>
+              </div>
+              <div id="cardbody" class="card card-cascade cascading-admin-card">
+                <div  class="admin-up">
+                  <i class="primary-color far fa-id-card"></i>
+                  <div  class="data">
+                    <p style="font-weight: bold;font-size: 20px;"><strong>{{ignored_data_length}}</strong></p>
+                    <p >LIGNES IGNOREES</p>
+                  </div>
+                </div>
+                <div  class="card-body">
+                </div>
+              </div>
+            </div>
+            <div  class="row" style="margin-top: 20px;margin-left: 1px;">
+      <ag-charts-angular
+      style="height: 620px;margin-left: 2px;width:750px;    box-shadow:  10px 10px 10px #aaaaaa;
+      "
+      [options]="options5"
+    ></ag-charts-angular>
+    <div style="margin-left: 20px;">
+     <div style="box-shadow:10px 10px 5px #aaaaaa;">
+      <ag-charts-angular
+      style="height: 100%;box-shadow:  10px 10px 5px #aaaaaa;"
+      [options]="options"
+    ></ag-charts-angular>
+  </div>
+  <div style="margin-top: 20px;box-shadow:10px 10px 5px #aaaaaa;">
+    <ag-charts-angular
+    style="height: 100%;"
+    [options]="options2"
+  ></ag-charts-angular></div>
+  </div>   </div>
+            <div style="margin-top: 20px;" class="row">
+            <ag-charts-angular
+      style="height: 400px;width:768px;
+          box-shadow:  10px 10px 5px #aaaaaa;
+
+      "
+      [options]="options3"
+    ></ag-charts-angular>
+    <ag-charts-angular
+    style="height: 400px;
+    box-shadow:  10px 10px 10px #aaaaaa;
+              margin-left: 20px;
+"
+    [options]="options4"
+  ></ag-charts-angular>
+  </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>

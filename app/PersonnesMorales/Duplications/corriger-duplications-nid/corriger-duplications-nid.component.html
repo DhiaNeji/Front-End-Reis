@@ -1,0 +1,78 @@
+
+    <div style="margin-top: 60px;padding-bottom: 0px;" class="card-body d-sm-flex justify-content-between">
+      <h1  class="text-uppercase text-black font-weight-bold"><i class="fas fa-fingerprint"></i>   Correction des duplications par Nid pour les personnes physiques</h1>
+      <button mdbBtn *ngIf="!isSearching && !isErroneousNations" [disabled]="!isFinished" type="button"  color="primary" outline="true" (click)="prepareData()" id="btn_3" mdbWavesEffect>Préparer les duplications des noms et des prenoms</button>
+      <div *ngIf="isSearching" class="spinner-border text-light" role="status">
+      </div>
+      <button mdbBtn (click)="clear()"  *ngIf="isErroneousNations" type="button" routerLink="/correction-duplications-whole-name" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+     </div>
+       <hr>
+       <section class="mt-lg-2">
+         <div class="row">
+       <div  class="col-xl-9 col-lg-6">
+         <div  class="card card-stats mb-4 mb-xl-0">
+           <div style="background-color: ghostwhite;" class="card-body">
+         <div  class="row">
+           <div  style=" height: 500px;" class="col">
+             <h5  class="card-title text-uppercase text-muted mb-0">Lignes traitées </h5>
+             <div style="height: 500px;">
+              <ag-grid-angular
+              #agGrid
+              style="width: 100%; height: 100%"
+              id="myGrid"
+              class="ag-theme-alpine"
+              [modules]="modules"
+              [columnDefs]="columnDefs"
+              [defaultColDef]="defaultColDef"
+              [autoGroupColumnDef]="autoGroupColumnDef"
+              [rowModelType]="rowModelType"
+              [suppressAggFuncInHeader]="true"
+              [animateRows]="true"
+              [rowSelection]="rowSelection"
+              [groupSelectsChildren]="true"
+              [suppressAggFuncInHeader]="true"
+              [overlayLoadingTemplate]="overlayLoadingTemplate"
+              [isRowSelectable]="isRowSelectable"
+              [frameworkComponents]="frameworkComponents"
+        (cellEditingStarted)="start($event)"
+        [paginationPageSize]="paginationPageSize"
+        [maxBlocksInCache]="maxBlocksInCache"
+              [rowModelType]="rowModelType"
+              [suppressRowClickSelection]="true"
+              [getRowNodeId]="getRowNodeId"
+              [getRowStyle]="getRowStyle"
+              [pagination]="true"
+              (cellValueChanged)="edit($event)"
+          [undoRedoCellEditing]="true"
+          [undoRedoCellEditingLimit]="undoRedoCellEditingLimit"
+        (rowSelected)="rowSelectedHandler($event)"
+              [rowData]="rowData"
+              (gridReady)="onGridReady($event)"
+            ></ag-grid-angular>
+             </div>
+           </div>
+       </div>
+       </div>
+       </div>
+       </div>
+
+       <div  style="width: 400px;" class="col-xl-3 col-lg-6">
+         <div  class="card card-stats mb-4 mb-xl-0">
+           <div  style="background-color: ghostwhite;" class="card-body">
+         <div  class="row">
+           <div  class="col">
+             <h5  class="card-title text-uppercase text-muted mb-0">Lignes traitées </h5>
+             <div style="height: 480px;">
+               <ag-charts-angular style="background-color: ghostwhite;width:120px"
+               style="height: 100%"
+               [options]="options2"
+               ></ag-charts-angular>
+
+             </div>
+           </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </section>

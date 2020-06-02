@@ -1,0 +1,133 @@
+
+.navbar-inverse {
+  background-color: #4096ee;
+  border-color: #cccccc;
+
+  .navbar-brand { color: #ffffff; }
+  .navbar-brand:hover { color: #ddedfd; }
+
+  .navbar-nav {
+
+    > .open {
+
+      > a,
+      > a:focus,
+      > a:hover { background-color: #a1c4f0; }
+
+    }
+
+    > li {
+
+      > a { color: #fff; }
+    }
+
+    .dropdown-menu {
+      padding: 0px;
+      overflow: hidden;
+
+      .navbar-content {
+        width:270px;
+        padding: 15px;
+        padding-bottom:0px;
+      }
+
+      .navbar-content:before,
+      .navbar-content:after {
+        display: table;
+        content: "";
+        line-height: 0;
+      }
+
+      .navbar-footer {
+        background-color: #ddd;
+
+        .navbar-footer-content { padding:15px 15px 15px 15px; }
+
+      }
+
+    }
+
+  }
+
+  .navbar-right > li:last-child { margin-right: 15px; }
+
+}
+
+.sidebar {
+  display: none;
+
+  @media (min-width: 768px) {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0px 20px 20px;
+    overflow-x: hidden;
+    overflow-y: auto; // Scrollable contents if viewport is shorter than content.
+    background-color: #f5f5f5;
+    border-right: 1px solid #e7e7e7;
+  }
+
+  .client-info {
+    background-color: #cbefff;
+    margin: 0px -20px;
+
+    img {
+      border: 1px solid #a8e1fa;
+      margin: 10px;
+    }
+
+    p {
+      font-weight: bold;
+      color: #555;
+      margin-top: 15px;
+      margin-right: 10px;
+    }
+
+  }
+
+}
+
+.nav-sidebar {
+  margin-right: -21px; // 20px padding + 1px border
+  margin-bottom: 20px;
+  margin-left: -20px;
+
+  li {
+
+    > a {
+      position: relative;
+      display: block;
+      padding: 10px 20px;
+    }
+
+    > a:focus,
+    > a:hover {
+      text-decoration: none;
+      background-color: #eee;
+    }
+
+  }
+
+  .active {
+
+    > a,
+    > a:hover,
+    > a:focus {
+      color: #fff;
+      background-color: #428bca;
+    }
+
+  }
+
+  .sidebar-header {
+    display: block;
+    background-color: #ddd;
+    padding: 10px 20px;
+    color: #555;
+    font-size: 18px;
+  }
+
+}

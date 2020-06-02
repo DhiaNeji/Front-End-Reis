@@ -1,0 +1,78 @@
+
+    <div style="margin-top: 60px;padding-bottom: 0px;" class="card-body d-sm-flex justify-content-between">
+      <h1  class="text-uppercase text-black font-weight-bold"><i class="fas fa-file-signature"></i>  Correction des duplications des noms et des prenoms</h1>
+    </div>
+       <hr>
+       <section class="mt-lg-2">
+         <div class="row">
+       <div  class="col-xl-9 col-lg-6">
+         <div  class="card card-stats mb-4 mb-xl-0">
+           <div style="background-color: ghostwhite;" class="card-body">
+         <div  class="row">
+           <div  style=" height: 500px;" class="col">
+             <h5  class="card-title text-uppercase text-muted mb-0">Traitement</h5>
+             <div style="height: 500px;">
+
+<ag-grid-angular
+#agGrid
+style="width: 100%; height: 100%"
+id="myGrid"
+class="ag-theme-alpine"
+[modules]="modules"
+[columnDefs]="columnDefs"
+[defaultColDef]="defaultColDef"
+[autoGroupColumnDef]="autoGroupColumnDef"
+[rowModelType]="rowModelType"
+[animateRows]="true"
+[rowSelection]="rowSelection"
+[groupSelectsChildren]="true"
+[suppressAggFuncInHeader]="true"
+[isRowSelectable]="isRowSelectable"
+
+[paginationPageSize]="paginationPageSize"
+[cacheBlockSize]="cacheBlockSize"
+[maxBlocksInCache]="maxBlocksInCache"
+[rowModelType]="rowModelType"
+[suppressRowClickSelection]="true"
+[getRowNodeId]="getRowNodeId"
+[getRowStyle]="getRowStyle"
+[frameworkComponents]="frameworkComponents"
+[pagination]="true"
+(cellValueChanged)="edit($event)"
+[undoRedoCellEditing]="true"
+(cellEditingStarted)="start($event)"
+[overlayLoadingTemplate]="overlayLoadingTemplate"
+(cellKeyDown)="onCellKeyDown($event)"
+[undoRedoCellEditingLimit]="undoRedoCellEditingLimit"
+(rowSelected)="rowSelectedHandler($event)"
+[rowData]="rowData"
+(gridReady)="onGridReady($event)"
+></ag-grid-angular>
+
+             </div>
+           </div>
+       </div>
+       </div>
+       </div>
+       </div>
+
+       <div  style="width: 400px;" class="col-xl-3 col-lg-6">
+         <div  class="card card-stats mb-4 mb-xl-0">
+           <div  style="background-color: ghostwhite;" class="card-body">
+         <div  class="row">
+           <div  class="col">
+             <h5  class="card-title text-uppercase text-muted mb-0">Progression de l'étape</h5>
+             <div style="height: 480px;">
+               <ag-charts-angular style="background-color: ghostwhite;width:120px"
+               style="height: 100%"
+               [options]="options2"
+               ></ag-charts-angular>
+
+             </div>
+           </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </section>

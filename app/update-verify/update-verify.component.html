@@ -1,0 +1,17 @@
+<h3 style="margin-left: 200px;">Liste des personnes ayant la meme date de naissance et le mem Nid</h3>
+ <ag-grid-angular
+ style="width:1040px; height:150px"
+ class="ag-theme-alpine"
+ [rowData]="rowData"
+ [columnDefs]="columnDefs"
+ >
+</ag-grid-angular>
+<div mat-dialog-content>
+</div>
+<div mat-dialog-actions>
+<diV style="margin-left: 300px;">
+  <button mat-button (click)="onNoClick()">Fermer</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Retirer ces clients et mettre à jour</button>
+</diV>
+</div>
+

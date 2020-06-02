@@ -1,0 +1,364 @@
+<h1  style="margin-top: 150px;background-color: #EDEDEE;" class="text-center">Correction des identifiants clients</h1>
+
+<section  class="mt-lg-5">
+  <div   class="row">
+    <div  class="col-xl-3 col-md-6 mb-r">
+      <div  class="card card-cascade cascading-admin-card">
+        <div  class="admin-up">
+          <i class="warning-color far fa-id-card"></i>
+          <div  class="data">
+            <p >Etape 1</p>
+          </div>
+        </div>
+        <div  class="card-body">
+          <div  class="progress">
+            <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+            </div>
+            </div>
+
+            <p  class="card-text">Correction des numéros des cartes d'identités tunisiennes</p>
+            <button mdbBtn type="button" *ngIf="this.steps[0].getIsSearching()==false && this.steps[0].getIsEnded()==false" (click)="prepareErrCarteIdentite()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[0].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[0].getIsEnded()==true" (click)="openPage_1()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+        </div>
+      </div>
+    </div>
+      <div  class="col-xl-3 col-md-6 mb-r">
+        <div  class="card card-cascade cascading-admin-card">
+          <div  class="admin-up">
+            <i class="red accent-2 fas fa-passport"></i>
+            <div  class="data">
+              <p >Etape 2</p>
+            </div>
+          </div>
+          <div  class="card-body">
+            <div  class="progress">
+              <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+              </div>
+            </div>
+            <p  class="card-text">Correction des numéros des passeports                         </p>
+            <button mdbBtn type="button" *ngIf="this.steps[1].getIsSearching()==false && this.steps[1].getIsEnded()==false" (click)="prepareErrPasseports()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[1].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[1].getIsEnded()==true" (click)="openPage_2()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+          </div>
+        </div>
+      </div>
+      <div  class="col-xl-3 col-md-6 mb-r">
+        <div  class="card card-cascade cascading-admin-card">
+          <div  class="admin-up">
+            <i class="primary-color fas fa-file-signature"></i>
+            <div  class="data">
+              <p >Etape 2</p>
+            </div>
+          </div>
+          <div  class="card-body">
+            <div  class="progress">
+              <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+              </div>
+            </div>
+            <p  class="card-text">Correction des numéros des cartes de séjour</p>
+            <button mdbBtn type="button" *ngIf="this.steps[2].getIsSearching()==false && this.steps[2].getIsEnded()==false" (click)="prepareErrCarteSejour()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[2].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[2].getIsEnded()==true" (click)="openPage_3()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+          </div>
+        </div>
+      </div>
+      <div  class="col-xl-3 col-md-6 mb-r">
+        <div  class="card card-cascade cascading-admin-card">
+          <div  class="admin-up">
+            <i class="light-blue lighten-1 fas fa-file-signature"></i>
+            <div  class="data">
+              <p >Etape 2</p>
+            </div>
+          </div>
+          <div  class="card-body">
+            <div  class="progress">
+              <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+              </div>
+            </div>
+            <p  class="card-text">Correction des matricules fiscaux</p>
+            <button mdbBtn type="button" *ngIf="this.steps[3].getIsSearching()==false && this.steps[3].getIsEnded()==false" (click)="prepareErrMatriculeFiscale()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[3].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[3].getIsEnded()==true" (click)="openPage_4()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+          </div>
+        </div>
+      </div>
+      <div  class="col-xl-3 col-md-6 mb-r">
+        <div  class="card card-cascade cascading-admin-card">
+          <div  class="admin-up">
+            <i class="primary-color fas fa-file-signature"></i>
+            <div  class="data">
+              <p >Etape 2</p>
+            </div>
+          </div>
+          <div  class="card-body">
+            <div  class="progress">
+              <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+              </div>
+            </div>
+            <p  class="card-text">Correction des numéros des registres de commerce</p>
+            <button mdbBtn type="button" *ngIf="this.steps[4].getIsSearching()==false && this.steps[4].getIsEnded()==false" (click)="prepareErrRegistreDeCommerce()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[4].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[4].getIsEnded()==true" (click)="openPage_5()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+          </div>
+        </div>
+      </div>
+      <div  class="col-xl-3 col-md-6 mb-r">
+        <div  class="card card-cascade cascading-admin-card">
+          <div  class="admin-up">
+            <i class="warning-color fas fa-file-signature"></i>
+            <div  class="data">
+              <p >Etape 2</p>
+            </div>
+          </div>
+          <div  class="card-body">
+            <div  class="progress">
+              <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+              </div>
+            </div>
+            <p  class="card-text">Correction des identifiants manquants</p>
+            <button mdbBtn type="button" *ngIf="this.steps[5].getIsSearching()==false && this.steps[5].getIsEnded()==false" (click)="prepareErrTin()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[5].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[5].getIsEnded()==true" (click)="openPage_6()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <h1  style="margin-top: 30px;" class="text-center">Correction des coordonnées</h1>
+
+  <section   class="mt-lg-5">
+    <div   class="row">
+      <div  class="col-xl-3 col-md-6 mb-r">
+        <div  class="card card-cascade cascading-admin-card">
+          <div  class="admin-up">
+            <i class="warning-color far fa-id-card"></i>
+            <div  class="data">
+              <p >Etape 7</p>
+            </div>
+          </div>
+          <div  class="card-body">
+            <div  class="progress">
+              <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+              </div>
+              </div>
+
+              <p  class="card-text">Correction des dates de naissances</p>
+              <button mdbBtn type="button" *ngIf="this.steps[6].getIsSearching()==false && this.steps[6].getIsEnded()==false" (click)="prepareErrDateNaissance()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+              <div style="margin-left: 120px;" *ngIf="this.steps[6].getIsSearching()==true" class="spinner-border text-light" role="status">
+              </div>
+              <button mdbBtn type="button" *ngIf="this.steps[6].getIsEnded()==true" (click)="openPage_7()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+          </div>
+        </div>
+      </div>
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="red accent-2 fas fa-passport"></i>
+              <div  class="data">
+                <p >Etape 8</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+              </div>
+              <p  class="card-text">Correction des Nationalités                         </p>
+              <button mdbBtn type="button" *ngIf="this.steps[7].getIsSearching()==false && this.steps[7].getIsEnded()==false" (click)="prepareErrNationalites()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[7].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[7].getIsEnded()==true" (click)="openPage_8()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+            </div>
+          </div>
+        </div>
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="primary-color fas fa-file-signature"></i>
+              <div  class="data">
+                <p >Etape 9</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+              </div>
+              <p  class="card-text">Correction des emails</p>
+              <button mdbBtn type="button" *ngIf="this.steps[8].getIsSearching()==false && this.steps[8].getIsEnded()==false" (click)="prepareErrEmail()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[8].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[8].getIsEnded()==true" (click)="openPage_9()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+            </div>
+          </div>
+        </div>
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="light-blue lighten-1 fas fa-file-signature"></i>
+              <div  class="data">
+                <p >Etape 10</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+              </div>
+              <p  class="card-text">Correction des noms</p>
+              <button mdbBtn type="button" *ngIf="this.steps[9].getIsSearching()==false && this.steps[9].getIsEnded()==false" (click)="prepareErrNoms()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[9].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[9].getIsEnded()==true" (click)="openPage_10()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+            </div>
+          </div>
+        </div>
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="primary-color fas fa-file-signature"></i>
+              <div  class="data">
+                <p >Etape 11</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+              </div>
+              <p  class="card-text">Correction des prenoms</p>
+              <button mdbBtn type="button" *ngIf="this.steps[10].getIsSearching()==false && this.steps[10].getIsEnded()==false" (click)="prepareErrPrenoms()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+            <div style="margin-left: 120px;" *ngIf="this.steps[10].getIsSearching()==true" class="spinner-border text-light" role="status">
+            </div>
+            <button mdbBtn type="button" *ngIf="this.steps[10].getIsEnded()==true" (click)="openPage_11()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+            </div>
+          </div>
+        </div>
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="warning-color fas fa-file-signature"></i>
+              <div  class="data">
+                <p >Etape 12</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+              </div>
+              <p  class="card-text">Correction des numéros des téléphones</p>
+              <button type="button" class="btn btn-outline-primary waves-effect">Préparer les données</button>
+            </div>
+          </div>
+        </div>
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="warning-color fas fa-file-signature"></i>
+              <div  class="data">
+                <p >Etape 13</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+              </div>
+              <p  class="card-text">Correction des adresses</p>
+              <button type="button" class="btn btn-outline-primary waves-effect">Préparer les données</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <h1  style="margin-top: 30px;" class="text-center">Correction des duplications</h1>
+
+    <section   class="mt-lg-5">
+      <div   class="row">
+        <div  class="col-xl-3 col-md-6 mb-r">
+          <div  class="card card-cascade cascading-admin-card">
+            <div  class="admin-up">
+              <i class="warning-color far fa-id-card"></i>
+              <div  class="data">
+                <p >Etape 14</p>
+              </div>
+            </div>
+            <div  class="card-body">
+              <div  class="progress">
+                <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                </div>
+                </div>
+
+                <p  class="card-text">Correction des duplications des identifiants et dates de naissance pour les personnes physiques</p>
+                <button mdbBtn type="button" *ngIf="this.steps[13].getIsSearching()==false && this.steps[13].getIsEnded()==false" (click)="prepareDuplicationNidDateNaissance()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+                <div style="margin-left: 120px;" *ngIf="this.steps[13].getIsSearching()==true" class="spinner-border text-light" role="status">
+                </div>
+                <button mdbBtn type="button" *ngIf="this.steps[13].getIsEnded()==true" (click)="openPage_14()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+            </div>
+          </div>
+        </div>
+          <div  class="col-xl-3 col-md-6 mb-r">
+            <div  class="card card-cascade cascading-admin-card">
+              <div  class="admin-up">
+                <i class="red accent-2 fas fa-passport"></i>
+                <div  class="data">
+                  <p >Etape 15</p>
+                </div>
+              </div>
+              <div  class="card-body">
+                <div  class="progress">
+                  <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                  </div>
+                </div>
+                <p  class="card-text">Correction des duplications des identifiants pour les personnes morales                        </p>
+                <button mdbBtn type="button" *ngIf="this.steps[14].getIsSearching()==false && this.steps[14].getIsEnded()==false" (click)="prepareDuplicationNidPP()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+                <div style="margin-left: 120px;" *ngIf="this.steps[14].getIsSearching()==true" class="spinner-border text-light" role="status">
+                </div>
+                <button mdbBtn type="button" *ngIf="this.steps[14].getIsEnded()==true" (click)="openPage_15()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+              </div>
+            </div>
+          </div>
+          <div  class="col-xl-3 col-md-6 mb-r">
+            <div  class="card card-cascade cascading-admin-card">
+              <div  class="admin-up">
+                <i class="success-color fas fa-file-signature"></i>
+                <div  class="data">
+                  <p >Etape 9</p>
+                </div>
+              </div>
+              <div  class="card-body">
+                <div  class="progress">
+                  <div  aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-primary" role="progressbar" style="width: 25%">
+                  </div>
+                </div>
+                <p  class="card-text">Correction des duplications des noms et des prènoms pour les personnes physiques</p>
+                <button mdbBtn type="button" *ngIf="this.steps[15].getIsSearching()==false && this.steps[15].getIsEnded()==false" (click)="prepareWholeNameDuplication()" color="primary" outline="true"  mdbWavesEffect>Préparere les données</button>
+                <div style="margin-left: 120px;" *ngIf="this.steps[15].getIsSearching()==true" class="spinner-border text-light" role="status">
+                </div>
+                <button mdbBtn type="button" *ngIf="this.steps[15].getIsEnded()==true" (click)="openPage_16()" color="primary" outline="true"  mdbWavesEffect>Consulter la page</button>
+
+              </div>
+            </div>
+          </div>      </div>
+
+      </section>
